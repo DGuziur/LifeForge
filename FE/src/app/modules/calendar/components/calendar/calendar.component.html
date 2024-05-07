@@ -1,1 +1,16 @@
-<p>calendar works!</p>
+<div class="text-md-center p-3 text-bg-secondary fw-bold fs-5">
+  September 2024
+</div>
+<div class="d-grid calendar-days">
+  @for (
+    day of [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+      22, 23, 24, 25, 26, 27, 28, 29, 30
+    ];
+    track day
+  ) {
+    <div class="bg-body-tertiary">
+      {{ day }}
+    </div>
+  }
+</div>
