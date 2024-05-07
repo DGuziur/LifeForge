@@ -1,6 +1,6 @@
-import { Task } from './task.type';
+import { CalendarTask } from './task.type';
 
-export interface Day {
+export interface CalendarDay {
   date: Date;
-  tasks?: Task[];
+  tasks?: CalendarTask[];
 }
