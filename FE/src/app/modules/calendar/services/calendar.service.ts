@@ -1,11 +1,16 @@
-import { Injectable, input } from '@angular/core';
+import { computed, Injectable, input, OnInit, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CalendarService {
-  today = new Date();
-  day = input<number>(this.today.getDay());
-  year = input<number>(this.today.getFullYear());
-  monthIndex = input<number>(this.today.getMonth());
+  monthIndex = signal<number>(new Date().getMonth() + 1);
+  year = signal<number>(new Date().getFullYear());
+  numberOfDays = computed(() =>
+    this.daysInMonth(this.monthIndex(), this.year()),
+  );
+
+  daysInMonth(month: number, year: number): number {
+    return new Date(this.year(), this.monthIndex(), 0).getDate();
+  }
 }
