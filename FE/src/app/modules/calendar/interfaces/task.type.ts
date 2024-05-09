@@ -1,6 +1,8 @@
 export interface CalendarTask {
-  title: string;
+  completed: boolean;
+  createDate?: Date;
   description: string;
   dueDate?: Date;
-  completed: boolean;
+  completedDate?: Date;
+  title: string;
 }
