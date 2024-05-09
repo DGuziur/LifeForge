@@ -1,7 +1,9 @@
 import { CalendarTask } from './task.type';
 
 export interface CalendarDay {
-  date: Date;
+  day: number;
+  month: number;
+  year: number;
   tasks?: CalendarTask[];
   calories: number;
   caloriesGoal: number;

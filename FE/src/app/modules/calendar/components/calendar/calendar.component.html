@@ -10,7 +10,11 @@
 <div class="d-grid calendar-days" [formGroup]="calendarForm">
   <ng-container formArrayName="days">
     @for (day of days.controls; track day) {
-      <div class="bg-body-tertiary calendar-day" [formGroupName]="$index">
+      <div
+        class="bg-body-tertiary calendar-day"
+        (click)="dayData.emit(days.controls[$index].value)"
+        [formGroupName]="$index"
+      >
         {{ day.value.day }}
       </div>
     }

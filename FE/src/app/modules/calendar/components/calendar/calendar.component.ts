@@ -1,4 +1,11 @@
-import { Component, computed, effect, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  inject,
+  OnInit,
+  output,
+} from '@angular/core';
 import { CalendarService } from '../../services/calendar.service';
 import { DateNamesHelper } from '../../helpers/date-names.helper';
 import { CalendarTaskBuilder } from '../../builders/calendar-task.builder';
@@ -25,6 +32,7 @@ export class CalendarComponent {
     days: new FormArray([]),
   });
   days = this.calendarForm.get('days') as FormArray;
+  dayData = output();
 
   dateChanges = effect(() => {
     this.updateMonth();
@@ -58,4 +66,6 @@ export class CalendarComponent {
       );
     }
   }
+
+  protected readonly console = console;
 }

@@ -8,6 +8,7 @@ export class CalendarTaskBuilder {
       year: new FormControl<number>(year),
       tasks: new FormArray([]),
       calories: new FormControl<number>(0),
+      caloriesGoal: new FormControl<number>(1800),
     });
   }
 
