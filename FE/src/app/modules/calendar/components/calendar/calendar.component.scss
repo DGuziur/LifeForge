@@ -1,6 +1,10 @@
 .calendar-day {
-  height: 100%;
-  width: 100%;
+  &:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: transform 0.15s;
+    cursor: pointer;
+  }
 }
 
 .calendar-days {
