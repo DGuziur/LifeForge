@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { Component, input, model } from '@angular/core';
 import { CalendarDay } from '../../interfaces/day.type';
 
 @Component({
@@ -9,5 +9,5 @@ import { CalendarDay } from '../../interfaces/day.type';
   styleUrl: './summary.component.scss',
 })
 export class SummaryComponent {
-  dayData = model<CalendarDay>();
+  dayData = input<CalendarDay>();
 }

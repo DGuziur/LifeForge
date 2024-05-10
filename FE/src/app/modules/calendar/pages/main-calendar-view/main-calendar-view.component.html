@@ -1,4 +1,4 @@
 <div class="d-grid gap-1 calendar-main-page-container">
-  <lf-calendar (dayData)="dayData()"></lf-calendar>
+  <lf-calendar (dayData)="dayData.set($event)"></lf-calendar>
   <lf-summary [dayData]="dayData()"></lf-summary>
 </div>

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, model } from '@angular/core';
 import { CalendarComponent } from '../../components/calendar/calendar.component';
 import { SummaryComponent } from '../../components/summary/summary.component';
 import { CalendarDay } from '../../interfaces/day.type';
@@ -11,5 +11,5 @@ import { CalendarDay } from '../../interfaces/day.type';
   styleUrl: './main-calendar-view.component.scss',
 })
 export class MainCalendarViewComponent {
-  dayData = input<CalendarDay>();
+  dayData = model<CalendarDay>();
 }

@@ -32,7 +32,7 @@ export class CalendarComponent {
     days: new FormArray([]),
   });
   days = this.calendarForm.get('days') as FormArray;
-  dayData = output();
+  dayData = output<CalendarDay>();
 
   dateChanges = effect(() => {
     this.updateMonth();
