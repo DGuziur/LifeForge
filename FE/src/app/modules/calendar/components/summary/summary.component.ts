@@ -1,5 +1,6 @@
-import { Component, input, model } from '@angular/core';
+import { Component, effect, input } from '@angular/core';
 import { CalendarDay } from '../../interfaces/day.type';
+import { CalendarTaskBuilder } from '../../builders/calendar-task.builder';
 
 @Component({
   selector: 'lf-summary',
@@ -10,4 +11,13 @@ import { CalendarDay } from '../../interfaces/day.type';
 })
 export class SummaryComponent {
   dayData = input<CalendarDay>();
+  taskForm = CalendarTaskBuilder.buildTask();
+
+  dayDataEff = effect(() => {
+    console.log(this.dayData());
+  });
+
+  addTask(): void {
+    this.dayData()?.tasks?.push(this.taskForm.value);
+  }
 }

@@ -66,6 +66,4 @@ export class CalendarComponent {
       );
     }
   }
-
-  protected readonly console = console;
 }

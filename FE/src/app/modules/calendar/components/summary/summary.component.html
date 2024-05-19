@@ -1,6 +1,12 @@
 <div class="w-100 h-100 bg-body-tertiary">
   <div class="text-md-center p-3 text-bg-secondary fw-bold fs-5">
     <span>Podsumowanie</span>
+    <button class="btn-secondary" (click)="addTask()">Dodaj</button>
   </div>
-  <span></span>
+  @for (task of dayData()?.tasks; track task) {
+    <div>
+      <span>{{ task.title || "Brak tytułu" }}</span>
+      <span>{{ task.completed || "Brak danych" }}</span>
+    </div>
+  }
 </div>
