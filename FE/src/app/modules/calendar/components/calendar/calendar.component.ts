@@ -1,20 +1,8 @@
-import {
-  Component,
-  computed,
-  effect,
-  inject,
-  OnInit,
-  output,
-} from '@angular/core';
+import { Component, computed, effect, inject, output } from '@angular/core';
 import { CalendarService } from '../../services/calendar.service';
 import { DateNamesHelper } from '../../helpers/date-names.helper';
 import { CalendarTaskBuilder } from '../../builders/calendar-task.builder';
-import {
-  Form,
-  FormArray,
-  FormGroup,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CalendarDay } from '../../interfaces/day.type';
 
 @Component({
