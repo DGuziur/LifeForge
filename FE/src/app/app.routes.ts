@@ -18,6 +18,13 @@ export const routes: Routes = [
             './modules/calendar/pages/main-calendar-view/main-calendar-view.component'
           ).then((c) => c.MainCalendarViewComponent),
       },
+      {
+        path: 'game-life',
+        loadComponent: () =>
+          import(
+            './modules/game-of-life/components/game-of-life/game-of-life.component'
+          ).then((c) => c.GameOfLifeComponent),
+      },
     ],
   },
 ];
